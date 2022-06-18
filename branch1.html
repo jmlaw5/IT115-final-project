@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Calculator</title>
+
+<script language="JavaScript">
+
+// Function for calculating Sum
+function getSum(){
+var first = Number(document.theForm.elements[0].value);
+var second = Number(document.theForm.elements[1].value);
+var sum = first + second;
+document.getElementById("answer").innerHTML = sum;
+}
+
+// Function for calculating Difference
+function getDifference(){
+var first = Number(document.theForm.elements[0].value);
+var second = Number(document.theForm.elements[1].value);
+var diff = first - second;
+document.getElementById("answer").innerHTML = diff;
+}
+
+// Function for calculating Product
+function getProduct(){
+var first = Number(document.theForm.elements[0].value);
+var second = Number(document.theForm.elements[1].value);
+var prod = first * second;
+document.getElementById("answer").innerHTML = prod;
+}
+
+// Function for calculating Quotient
+function getQuotient(){
+var first = Number(document.theForm.elements[0].value);
+var second = Number(document.theForm.elements[1].value);
+var quot = first / second;
+document.getElementById("answer").innerHTML = quot;
+}
+
+</script>
+
+</head>
+<body>
+<form name="theForm">
+Enter a number in each box.<br>
+<input type="text" ><br>
+<input type="text" ><br>
+<input type="button" value="Sum:" onClick="getSum()">
+<input type="button" value="Difference:" onClick="getDifference()">
+<input type="button" value="Product:" onClick="getProduct()">
+<input type="button" value="Quotient:" onClick="getQuotient()">
+<p id = "answer" ></p>
+</form>
+</body>
+</html>
